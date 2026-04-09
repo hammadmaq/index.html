@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<title>lyrics</title>
+<body>
+    <header style="background-color: aqua;">
+        <h1>WELCOME TO AhsiNiger WEBSITE</h1>
+        <a href="https://www.youtube.com/shorts/7uDmYwQa98c">About us</a>
+        <br>
+        <a href="https://www.youtube.com/watch?v=hZxU4A3F9T4">contact us</a>
+    </header>
+    <hr>
+    <main>
+    <h5>check out this handsome man</h5>
+    <image src="WIN_20260109_18_54_51_Pro.jpg" alt="handsome man" width="250" height="200"></image>
+    </main>
+    <hr>
+    <form id="myForm" action="index.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required placeholder="Write your username" minlength="4" maxlength="10">
+        <br><br>
+
+        <label for="EMAIL">Email:</label>
+        <input type="email" id="EMAIL" required placeholder="example@gmail.com">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required placeholder="Write your password" minlength="4" maxlength="10">
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required placeholder="+923706181633 or 03706181633" pattern="(\+92|0)3[0-9]{9}">
+        <br><br>
+
+        <label for="bday">Birthday:</label>
+        <input type="date" id="bday" required>
+        <br><br>
+
+        <label><input type="radio" value="student" name="title"> Student</label><br>
+        <label><input type="radio" value="job" name="title"> Job</label><br>
+        <label><input type="radio" value="ahsiniger" name="title"> Ahsiniger</label>
+        <br><br>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment">
+            <option value="jazzcash">JazzCash</option>
+            <option value="sadapay">SadaPay</option>
+            <option value="nayapay">NayaPay</option>
+        </select>
+        <br><br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- Hidden YouTube video section -->
+    <div id="videoSection" style="display:none; margin-top: 30px;">
+        <h2>🎵 Now Playing!</h2>
+        <iframe
+            id="youtubeVideo"
+            width="315"
+            height="560"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('myForm');
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // ✅ Your YouTube Shorts video ID
+            const videoID = "iToSCErcJZI";
+
+            const videoSection = document.getElementById('videoSection');
+            const iframe = document.getElementById('youtubeVideo');
+
+            iframe.src = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
+            videoSection.style.display = 'block';
+
+            videoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <hr>
+<FOOTER style="background-color: aquamarine;">
+    <H7>PowerSoft please hier mmeeee </H7>
+    <br>
+    <h7>written by hammadmaqsood</h7>
+    <br>
+    &copy;
+    <br>
+    <a href="MAILTO:hammadmaqsoood32@gmail.com">hammadmaqsood32@gmail.com</a>
+</FOOTER>
+</body>
+</html>
